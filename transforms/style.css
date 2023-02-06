@@ -1,4 +1,14 @@
-/* General Attributes */
+/* Style */
+@font-face {
+  font-family: Nunito;
+  src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: ScopeOne;
+  src: url(../fonts/Scope_One/ScopeOne-Regular.ttf);
+}
+
 :root {
   --c-dark: #070d0c;
   --c1-dark: #2a403a;
@@ -7,11 +17,20 @@
   --c2-light: #f26835;
 }
 
+body {
+  font: 2rem "ScopeOne", serif;
+  background: var(--c-dark);
+  color: var(--c1-light);
+  padding: 50px;
+}
+
+/* General Attributes */
 .box {
   width: 250px;
   height: 250px;
   background: var(--c2-light);
   border-radius: 2rem;
+  color: var(--c1-dark);
 }
 
 .center {
@@ -24,7 +43,7 @@
   border-top: 2rem solid var(--c2-dark);
 }
 
-/* Two Dimensional Transforms */
+/* EXAMPLE: Two Dimensional Transforms */
 .two-dimensional-transforms {
   display: flex;
   flex-direction: row;
@@ -44,7 +63,7 @@
   transform: rotate(0.5turn);
 }
 
-/* Scale */
+/* EXAMPLE: Scale */
 .scale-x {
   transform: scaleX(1.25);
 }
