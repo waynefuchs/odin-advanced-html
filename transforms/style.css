@@ -43,7 +43,6 @@ body {
   border-top: 2rem solid var(--c2-dark);
 }
 
-/* EXAMPLE: Two Dimensional Transforms */
 .example-container {
   display: flex;
   flex-direction: row;
@@ -51,26 +50,26 @@ body {
   padding: 4rem;
 }
 
-.two-dimensional-transforms > .rotate-by-deg {
+/* EXAMPLE: Two Dimensional Transforms */
+.rotate-by-deg {
   transform: rotate(45deg);
 }
 
-.two-dimensional-transforms > .rotate-by-rad {
+.rotate-by-rad {
   transform: rotate(-1rad);
 }
 
-.two-dimensional-transforms > .rotate-by-turn {
+.rotate-by-turn {
   transform: rotate(0.5turn);
 }
 
 /* EXAMPLE: Scale */
 .scale-x {
-  transform: scaleX(1.25);
+  transform: scaleX(0.5);
 }
 .scale-y {
-  transform: scaleY(0.25);
-}
-.scale-xy {
+  transform: scaleY(0.5);
 }
 .scale {
+  transform: scale(0.25);
 }
