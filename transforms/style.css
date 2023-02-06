@@ -44,7 +44,7 @@ body {
 }
 
 /* EXAMPLE: Two Dimensional Transforms */
-.two-dimensional-transforms {
+.example-container {
   display: flex;
   flex-direction: row;
   gap: 4rem;
