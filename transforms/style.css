@@ -73,3 +73,14 @@ body {
 .scale {
   transform: scale(0.25);
 }
+
+/* EXAMPLE: Skew */
+.skew-x {
+  transform: skewX(45deg);
+}
+.skew-y {
+  transform: skewY(-0.5rad);
+}
+.skew {
+  transform: skew(45deg, -0.5rad);
+}
