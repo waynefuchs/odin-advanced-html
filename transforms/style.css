@@ -47,40 +47,50 @@ body {
   display: flex;
   flex-direction: row;
   gap: 4rem;
-  padding: 4rem;
 }
 
 /* EXAMPLE: Two Dimensional Transforms */
-.rotate-by-deg {
+.rotate-by-deg:hover {
   transform: rotate(45deg);
 }
 
-.rotate-by-rad {
+.rotate-by-rad:hover {
   transform: rotate(-1rad);
 }
 
-.rotate-by-turn {
+.rotate-by-turn:hover {
   transform: rotate(0.5turn);
 }
 
 /* EXAMPLE: Scale */
-.scale-x {
+.scale-x:hover {
   transform: scaleX(0.5);
 }
-.scale-y {
+.scale-y:hover {
   transform: scaleY(0.5);
 }
-.scale {
+.scale:hover {
   transform: scale(0.25);
 }
 
 /* EXAMPLE: Skew */
-.skew-x {
+.skew-x:hover {
   transform: skewX(45deg);
 }
-.skew-y {
+.skew-y:hover {
   transform: skewY(-0.5rad);
 }
-.skew {
+.skew:hover {
   transform: skew(45deg, -0.5rad);
+}
+
+/* EXAMPLE: Translate */
+.translate-x:hover {
+  transform: translateX(100px);
+}
+.translate-y:hover {
+  transform: translateY(-33%);
+}
+.translate:hover {
+  transform: translate(2rem, 5vh);
 }
