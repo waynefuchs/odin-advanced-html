@@ -37,6 +37,13 @@ p {
   color: var(--c1-dark);
 }
 
+.camera {
+  /* perspective: 600px; */
+  perspective: 37.5rem; /* Assuming 1rem = 16px; <-- 600px */
+  /* perspective-origin: top left; */
+  /* transform-style: preserve-3d; */
+}
+
 .center {
   display: flex;
   flex-direction: column;
@@ -54,20 +61,18 @@ p {
   gap: 4rem;
 }
 
-/* EXAMPLE: Two Dimensional Transforms */
+/* ROTATE */
 .rotate-by-deg:hover {
   transform: rotate(45deg);
 }
-
 .rotate-by-rad:hover {
   transform: rotate(-1rad);
 }
-
 .rotate-by-turn:hover {
   transform: rotate(0.5turn);
 }
 
-/* EXAMPLE: Scale */
+/* SCALE */
 .scale-x:hover {
   transform: scaleX(0.5);
 }
@@ -75,8 +80,27 @@ p {
   transform: scaleY(0.5);
 }
 .scale:hover {
-  transform: scale(0.25);
+  transform: scale(0.5);
 }
+.scale-reference {
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+.scale-z {
+  transform: scaleZ(2) rotate3d(1, 1, 1, 45deg);
+}
+.scale-z:hover {
+  transform: scaleZ(-200%) rotate3d(1, 1, 1, 45deg);
+}
+.scale3d {
+  transform: scale3d(1.3, 1, 1) rotate3d(1, 1, 1, 45deg);
+}
+.scale3d:hover {
+  /* (x,y,z) */
+  transform: scale3d(2, 2, -2) rotate3d(1, 1, 1, 45deg);
+}
+/* transform: scaleZ(0.45); */
+/* transform: perspective(800px) scale3d(1, 1, 0.25); */
+/* transform: translateZ(-100px); */
 
 /* EXAMPLE: Skew */
 .skew-x:hover {
