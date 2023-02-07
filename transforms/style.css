@@ -24,6 +24,10 @@ body {
   padding: 50px;
 }
 
+p {
+  margin: 0;
+}
+
 /* General Attributes */
 .box {
   width: 250px;
@@ -35,6 +39,7 @@ body {
 
 .center {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -93,4 +98,17 @@ body {
 }
 .translate:hover {
   transform: translate(2rem, 5vh);
+}
+
+/* Example: Chaining Transforms */
+.chain1:hover {
+  transform: skewX(15deg) skewY(15deg);
+}
+
+.chain2:hover {
+  transform: rotate(15deg) scale(1.2) translate(50px, 50px);
+}
+
+.chain3:hover {
+  transform: translate(200%) rotate(45deg);
 }
