@@ -1,10 +1,73 @@
-/* EXAMPLE: Translate */
+/* TRANSLATE */
 .translate-x:hover {
   transform: translateX(100px);
 }
+
 .translate-y:hover {
   transform: translateY(-33%);
 }
+
 .translate:hover {
   transform: translate(2rem, 5vh);
+}
+
+.translate-z:hover {
+  transform: translateZ(100px);
+}
+
+.translate-3d:hover {
+  transform: translate3d(-100px, -100px, 300px);
+}
+
+.rotate-cube {
+  transform: translate3d(100px, 0, 0) rotate3d(0.5, 1, 1, 55deg);
+  transform-style: preserve-3d;
+  transition: all 0.75s ease;
+}
+
+.rotate-cube:hover {
+  transform: translate3d(-100px, 100px, 0) rotate3d(1.5, 0.25, 1, -55deg);
+  transform-style: preserve-3d;
+  transition: all 0.75s ease;
+}
+
+.no-radius {
+  border-radius: 0;
+}
+
+.box1 {
+  /* Front */
+  position: absolute;
+  transform: translateZ(125px);
+  background: var(--c1-light);
+}
+.box2 {
+  /* Back */
+  position: absolute;
+  transform: translateZ(-125px);
+  background: var(--c1-dark);
+}
+.box3 {
+  /* Right */
+  position: absolute;
+  transform: translateX(125px) rotateY(90deg);
+  background: var(--c2-dark);
+}
+.box4 {
+  /* Left */
+  position: absolute;
+  transform: translateX(-125px) rotateY(-90deg);
+  background: var(--c2-light);
+}
+.box5 {
+  /* Top */
+  position: absolute;
+  transform: translateY(125px) rotateX(-90deg);
+  background: var(--c-bg);
+}
+.box6 {
+  /* Bottom */
+  position: absolute;
+  transform: translateY(-125px) rotateX(90deg);
+  background: var(--c-fg);
 }

@@ -11,6 +11,7 @@
 
 :root {
   --c-bg: #0d0d0d;
+  --c-fg: #cdcdcd;
   --c1-dark: #3d403a;
   --c1-light: #888c81;
   --c2-dark: #d9c9ba;
@@ -40,6 +41,14 @@ body {
 .camera {
   /* perspective: 600px; */
   perspective: 37.5rem; /* Assuming 1rem = 16px; <-- 600px */
+  /* perspective-origin: top left; */
+  /* transform-style: preserve-3d; */
+}
+
+.camera-far {
+  perspective: 1200px; /* Assuming 1rem = 16px; <-- 600px */
+  transition: all 0.75s ease;
+
   /* perspective-origin: top left; */
   /* transform-style: preserve-3d; */
 }
