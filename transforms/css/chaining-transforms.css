@@ -1,0 +1,12 @@
+/* Example: Chaining Transforms */
+.chain1:hover {
+  transform: skewX(15deg) skewY(15deg);
+}
+
+.chain2:hover {
+  transform: rotate(15deg) scale(1.2) translate(50px, 50px);
+}
+
+.chain3:hover {
+  transform: translate(200%) rotate(45deg);
+}

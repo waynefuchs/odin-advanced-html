@@ -1,0 +1,69 @@
+/* Style */
+@font-face {
+  font-family: Nunito;
+  src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: ScopeOne;
+  src: url(../fonts/Scope_One/ScopeOne-Regular.ttf);
+}
+
+:root {
+  --c-bg: #0d0d0d;
+  --c1-dark: #3d403a;
+  --c1-light: #888c81;
+  --c2-dark: #d9c9ba;
+  --c2-light: #f2efeb;
+
+  /* --c-dark: #070d0c;
+  --c1-dark: #2a403a;
+  --c1-light: #5d8c56;
+  --c2-dark: #8c4a23;
+  --c2-light: #f26835; */
+}
+
+body {
+  font: 2rem "ScopeOne", serif;
+  background: var(--c-bg);
+  color: var(--c1-light);
+  padding: 50px;
+}
+
+p {
+  margin: 0;
+}
+
+/* General Attributes */
+.box {
+  width: 250px;
+  height: 250px;
+  background: var(--c2-light);
+  border-radius: 2rem;
+  color: var(--c1-dark);
+  transition: all 0.75s ease;
+}
+
+.camera {
+  /* perspective: 600px; */
+  perspective: 37.5rem; /* Assuming 1rem = 16px; <-- 600px */
+  /* perspective-origin: top left; */
+  /* transform-style: preserve-3d; */
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.marktop {
+  border-top: 2rem solid var(--c2-dark);
+}
+
+.example-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}

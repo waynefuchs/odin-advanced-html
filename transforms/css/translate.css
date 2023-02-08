@@ -1,0 +1,10 @@
+/* EXAMPLE: Translate */
+.translate-x:hover {
+  transform: translateX(100px);
+}
+.translate-y:hover {
+  transform: translateY(-33%);
+}
+.translate:hover {
+  transform: translate(2rem, 5vh);
+}

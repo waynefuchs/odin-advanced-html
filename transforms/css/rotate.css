@@ -1,0 +1,22 @@
+/* ROTATE */
+.rotate-by-deg:hover {
+  transform: rotateX(45deg);
+}
+.rotate-by-rad:hover {
+  transform: rotateY(-1rad);
+}
+.rotate-by-turn:hover {
+  transform: rotate(0.5turn);
+}
+.rotate-z {
+  transform: rotateZ(45deg);
+}
+.rotate-z:hover {
+  transform: rotateZ(90deg);
+}
+.rotate3d {
+  transform: rotate3d(0, 0, 0, 0deg);
+}
+.rotate3d:hover {
+  transform: rotate3d(1, 1, -1, 180deg);
+}

@@ -1,0 +1,10 @@
+/* EXAMPLE: Skew */
+.skew-x:hover {
+  transform: skewX(45deg);
+}
+.skew-y:hover {
+  transform: skewY(-0.5rad);
+}
+.skew:hover {
+  transform: skew(45deg, -0.5rad);
+}
