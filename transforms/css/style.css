@@ -15,23 +15,16 @@
   --c1-light: #888c81;
   --c2-dark: #d9c9ba;
   --c2-light: #f2efeb;
-
-  /* --c-dark: #070d0c;
-  --c1-dark: #2a403a;
-  --c1-light: #5d8c56;
-  --c2-dark: #8c4a23;
-  --c2-light: #f26835; */
 }
 
 body {
-  font: 2rem "ScopeOne", serif;
+  font: 1rem "ScopeOne", serif;
   background: var(--c-bg);
   color: var(--c1-light);
   padding: 50px;
-}
-
-p {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* General Attributes */
@@ -66,4 +59,20 @@ p {
   display: flex;
   flex-direction: row;
   gap: 4rem;
+}
+
+p {
+  font: 1rem "ScopeOne", serif;
+  padding: 1rem;
+  max-width: 50vw;
+}
+
+h1 {
+  font: 3rem "Nunito", sans;
+  font-weight: bold;
+}
+
+h3 {
+  font: 1.5rem "Nunito", sans;
+  margin-bottom: 1rem;
 }
