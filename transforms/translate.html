@@ -4,16 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/translate.css" />
     <title>Transforms</title>
   </head>
   <body>
     <h1>Translate</h1>
-    <p>Hover to see effect</p>
+
+    <h2>2D</h2>
     <div class="example-container">
       <div class="box center marktop translate-x">translateX</div>
       <div class="box center marktop translate-y">translateY</div>
       <div class="box center marktop translate">translate (both)</div>
+    </div>
+
+    <h2>3D</h2>
+    <div class="example-container">
+      <div class="camera">
+        <div class="box center marktop translate-z">
+          <p>translateZ</p>
+        </div>
+      </div>
+      <div class="camera">
+        <div class="box center marktop translate-3d">
+          <p>translate3d</p>
+        </div>
+      </div>
+
+      <div class="camera-far">
+        <div class="rotate-cube">
+          <div class="box box2 no-radius center"><h1>Back</h1></div>
+          <div class="box box3 no-radius center"><h1>Right</h1></div>
+          <div class="box box4 no-radius center"><h1>Left</h1></div>
+          <div class="box box5 no-radius center"><h1>Bottom</h1></div>
+          <div class="box box6 no-radius center"><h1>Top</h1></div>
+          <div class="box box1 no-radius center">
+            <h1>Front</h1>
+            <p>Each face is translated.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

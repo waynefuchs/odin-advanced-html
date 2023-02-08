@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/scale.css" />
     <title>Transforms</title>
   </head>
   <body>
     <h1>Scale</h1>
-    <p>Hover to see effect</p>
     <h2>2D</h2>
     <div class="example-container">
       <div class="box center marktop scale-x">scaleX</div>
@@ -19,9 +19,10 @@
 
     <h2>3D</h2>
     <p>
-      Scaling along the Z-Axis does nothing to objects that have no thickness. I
-      have used rotation here to demonstrate how `scaleZ()` and `scale3d()` can
-      be used.
+      I have used rotation here in addition to scale to demonstrate how
+      `scaleZ()` and `scale3d()` can be used, as scaling up or down on an object
+      with zero thickness will always scale to zero. By rotating the plane,
+      thickness can be simulated.
     </p>
     <div class="example-container">
       <div class="camera">
