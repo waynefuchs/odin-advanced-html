@@ -47,7 +47,6 @@ body {
 
 .camera-far {
   perspective: 1200px; /* Assuming 1rem = 16px; <-- 600px */
-  transition: all 0.75s ease;
 
   /* perspective-origin: top left; */
   /* transform-style: preserve-3d; */
@@ -67,6 +66,9 @@ body {
 .example-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 4rem;
 }
 
