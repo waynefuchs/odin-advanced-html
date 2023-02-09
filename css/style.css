@@ -120,3 +120,8 @@ a {
 a:hover {
   color: var(--c2-dark);
 }
+
+hr {
+  width: 12rem;
+  border: 3px solid var(--c1-dark);
+}
