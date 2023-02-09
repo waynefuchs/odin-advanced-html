@@ -1,12 +1,12 @@
 /* Style */
 @font-face {
   font-family: Nunito;
-  src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+  src: url(../../fonts/Nunito/Nunito-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: ScopeOne;
-  src: url(../fonts/Scope_One/ScopeOne-Regular.ttf);
+  src: url(../../fonts/Scope_One/ScopeOne-Regular.ttf);
 }
 
 :root {
@@ -86,4 +86,9 @@ h1 {
 h3 {
   font: 1.5rem "Nunito", sans;
   margin-bottom: 1rem;
+}
+
+.example-container p {
+  text-align: center;
+  margin: 0;
 }

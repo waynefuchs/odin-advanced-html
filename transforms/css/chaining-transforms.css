@@ -4,9 +4,9 @@
 }
 
 .chain2:hover {
-  transform: rotate(15deg) scale(1.2) translate(50px, 50px);
+  transform: rotate(45deg) skew(-15deg) scale(0.75) translate(100px, -100px);
 }
 
 .chain3:hover {
-  transform: translate(200%) rotate(45deg);
+  transform: translate(100px, -100px) scale(0.75) skew(-15deg) rotate(45deg);
 }

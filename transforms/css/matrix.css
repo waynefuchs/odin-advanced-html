@@ -1,8 +1,15 @@
+/* matrix(scaleX, skewY, skewX, scaleY, translateX, translateY) */
 .matrix1:hover {
-  background: purple;
-  /* matrix(scaleX, skewX, skewY, scaleY, translateX, translateY) */
-  /* transform: matrix(100px, 0, 0, 100px, 0, 0); */
-  transform: matrix(2, 0, 0, 2, 0, 0);
+  transform: matrix(1.25, 0, 0, 0.75, 0, 0);
 }
-.matrix2 {}
-.matrix3 {}
+.matrix2:hover {
+  transform: matrix(1, 0.5, 0.25, 1, 0, 0);
+}
+.matrix3:hover {
+  transform: matrix(1, 0, 0, 1, -100, 200);
+}
+
+.matrix-option1 {
+  transform: scale(0.75) rotate(45deg);
+  transition: none;
+}

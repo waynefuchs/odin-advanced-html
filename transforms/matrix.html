@@ -10,16 +10,41 @@
   </head>
   <body>
     <h1>Matrix</h1>
+
+    <p>
+      Readability on matrix is low, usually avoided. A good use case is
+      converting many individual chained transforms into a single call.
+    </p>
     <div class="example-container">
       <div class="box center marktop matrix1">
-        <p>matrix</p>
+        <p>matrix scale</p>
       </div>
       <div class="box center marktop matrix2">
-        <p>matrix</p>
+        <p>matrix skew</p>
       </div>
       <div class="box center marktop matrix3">
-        <p>matrix</p>
+        <p>matrix translate</p>
+      </div>
+
+      <div class="box center marktop matrix-option1" id="option1">
+        <p>Chaining Transforms</p>
+        <p><strong>EXAMPLE</strong></p>
+        <p id="option1-output"></p>
+      </div>
+
+      <div class="box center marktop" id="option1-set">
+        <p>Setting transform as matrix() call from chained transforms</p>
+        <p>`matrix()` values copied from "EXAMPLE using `getComputedStyle()`</p>
+        <p>(See js script in source)"</p>
+        <p id="option1-output"></p>
       </div>
     </div>
+
+    <script>
+      let ele = document.getElementById("option1");
+      let style = window.getComputedStyle(ele).getPropertyValue("transform");
+      document.getElementById("option1-output").innerText = style;
+      document.getElementById("option1-set").style.transform = style;
+    </script>
   </body>
 </html>
