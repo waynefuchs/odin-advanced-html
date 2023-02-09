@@ -82,6 +82,7 @@ p {
 h1 {
   font: 3rem "Nunito", sans;
   font-weight: bold;
+  margin: 0;
 }
 
 h3 {
