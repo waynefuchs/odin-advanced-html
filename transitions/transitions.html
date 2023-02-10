@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/transitions.css" />
+    <title>Transitions</title>
+  </head>
+  <body>
+    <h1>Transitions <a href="..">Back</a></h1>
+    <div class="example-container start-and-end">
+      <div id="heading">
+        <h2>Start</h2>
+        <h2>End</h2>
+      </div>
+
+      <p>steps(5, jump-start)</p>
+      <div id="steps-jump-start" class="box-small translate steps"></div>
+
+      <p>steps(5, start)</p>
+      <div id="steps-start" class="box-small translate steps"></div>
+
+      <p>steps(5, jump-end)</p>
+      <div id="steps-jump-end" class="box-small translate steps"></div>
+
+      <p>steps(5, end)</p>
+      <div id="steps-end" class="box-small translate steps"></div>
+
+      <p>steps(5, jump-none)</p>
+      <div id="steps-jump-none" class="box-small translate steps"></div>
+
+      <p>steps(5, jump-both)</p>
+      <div id="steps-jump-both" class="box-small translate steps"></div>
+
+      <p>linear</p>
+      <div id="linear" class="box-small translate"></div>
+
+      <p>ease</p>
+      <div id="ease" class="box-small translate"></div>
+
+      <p>ease-in-out</p>
+      <div id="ease-in-out" class="box-small translate"></div>
+
+      <p>cubic-bezier(.25,-0.25,.75,1.25)</p>
+      <div id="cubic-bezier" class="box-small translate"></div>
+    </div>
+  </body>
+</html>

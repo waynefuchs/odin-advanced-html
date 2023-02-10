@@ -1,0 +1,95 @@
+:root {
+  --duration: 5s;
+  --delay: 0s;
+  --step-hold: 0.25;
+  --step-count: 5;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(80vw - 100%));
+  }
+}
+
+.start-and-end {
+  border-left: 5px solid var(--c1-dark);
+  border-right: 5px solid var(--c1-dark);
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0;
+}
+
+.box-small {
+  width: 50px;
+  height: 50px;
+
+  background: var(--c2-light);
+  border-radius: 1rem;
+  color: var(--c1-dark);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.translate {
+  animation: none var(--duration) infinite var(--direction, alternate)
+    var(--ease-function, steps(var(--step-count), var(--jump-term)));
+  animation-name: move-right;
+}
+
+.steps {
+  background-color: var(--c1-dark);
+}
+
+#steps-jump-start {
+  --jump-term: jump-start;
+}
+
+#steps-jump-end {
+  --jump-term: jump-end;
+}
+
+#steps-jump-none {
+  --jump-term: jump-none;
+}
+
+#steps-jump-both {
+  --jump-term: jump-both;
+}
+
+#steps-start {
+  --jump-term: start;
+}
+
+#steps-end {
+  --jump-term: end;
+}
+
+#linear {
+  --ease-function: linear;
+}
+
+#ease {
+  --ease-function: ease;
+}
+
+#ease-in-out {
+  --ease-function: ease-in-out;
+}
+
+#cubic-bezier {
+  --ease-function: cubic-bezier(0.25, -0.25, 0.75, 1.25);
+}
+
+#heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
