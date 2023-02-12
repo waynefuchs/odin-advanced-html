@@ -10,12 +10,70 @@
   </head>
   <body>
     <h1>Transitions <a href="..">Back</a></h1>
+
+    <h2>Individual</h2>
+    <div class="example-container">
+      <p class="individual box center marktop">Hover over me to see effect</p>
+      <div class="box center marktop">
+        <div class="button-size rainbow"></div>
+        <div class="button-size button-curtain"></div>
+        <button class="button-size">Rainbow Hover</button>
+      </div>
+      <div class="multiple box center marktop">Multiple Effects</div>
+    </div>
+
+    <h2>Ball Demo</h2>
+    <div class="example-container">
+      <p>Click anywhere to move the ball</p>
+      <div id="foo" class="ball"></div>
+      <p>Status:</p>
+      <p id="ballstatus">Stationary</p>
+    </div>
+    <script>
+      const ballDiv = document.getElementById("foo");
+      const ballStatus = document.getElementById("ballstatus");
+      ballDiv.addEventListener("transitionend", (e) => {
+        console.log("Transition complete");
+        ballStatus.textContent = "Stationary";
+      });
+      ballDiv.addEventListener("transitionstart", (e) => {
+        console.log("Transition started");
+        ballStatus.textContent = "Moving";
+      });
+      document.addEventListener(
+        "click",
+        (ev) => {
+          ballDiv.style.transform = `translateY(${ev.clientY - 25}px)`;
+          ballDiv.style.transform += `translateX(${ev.clientX - 25}px)`;
+        },
+        false
+      );
+    </script>
+
+    <h2>Easing Functions (And Step Jump-Terms)</h2>
     <div class="example-container start-and-end">
       <div id="heading">
         <h2>Start</h2>
-
         <h2>End</h2>
       </div>
+
+      <p>linear</p>
+      <div id="linear" class="box-small translate"></div>
+
+      <p>ease</p>
+      <div id="ease" class="box-small translate"></div>
+
+      <p>ease-in</p>
+      <div id="ease-in" class="box-small translate"></div>
+
+      <p>ease-out</p>
+      <div id="ease-out" class="box-small translate"></div>
+
+      <p>ease-in-out</p>
+      <div id="ease-in-out" class="box-small translate"></div>
+
+      <p>cubic-bezier(.25,-0.25,.75,1.25)</p>
+      <div id="cubic-bezier" class="box-small translate"></div>
 
       <p>steps(5, jump-start)</p>
       <div id="steps-jump-start" class="box-small translate steps"></div>
@@ -34,18 +92,6 @@
 
       <p>steps(5, jump-both)</p>
       <div id="steps-jump-both" class="box-small translate steps"></div>
-
-      <p>linear</p>
-      <div id="linear" class="box-small translate"></div>
-
-      <p>ease</p>
-      <div id="ease" class="box-small translate"></div>
-
-      <p>ease-in-out</p>
-      <div id="ease-in-out" class="box-small translate"></div>
-
-      <p>cubic-bezier(.25,-0.25,.75,1.25)</p>
-      <div id="cubic-bezier" class="box-small translate"></div>
     </div>
   </body>
 </html>
