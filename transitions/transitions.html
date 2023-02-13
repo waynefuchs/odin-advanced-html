@@ -15,9 +15,15 @@
     <div class="example-container">
       <p class="individual box center marktop">Hover over me to see effect</p>
       <div class="box center marktop">
-        <div class="button-size rainbow"></div>
-        <div class="button-size button-curtain"></div>
-        <button class="button-size">Rainbow Hover</button>
+        <div class="bg">
+          <button id="rainbowbutton" class="center button-size">Rainbow Hover</button>
+        </div>
+        <script>
+          const rb = document.getElementById("rainbowbutton");
+          rb.addEventListener("click", (e) => {
+            alert("You clicked the button.")
+          })
+        </script>
       </div>
       <div class="multiple box center marktop">Multiple Effects</div>
     </div>

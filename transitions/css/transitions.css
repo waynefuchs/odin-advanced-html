@@ -3,6 +3,9 @@
   --delay: 0s;
   --step-hold: 0.25;
   --step-count: 5;
+
+  --button-width: 200px;
+  --button-height: 125px;
 }
 
 @keyframes move-right {
@@ -86,23 +89,48 @@
   rotate: 180deg;
 }
 
-button {
-  opacity: 1;
-  font-size: 2rem;
-  background: transparent;
-  padding: 1rem;
+.bg {
+  width: var(--button-width);
+  height: var(--button-height);
+  position: absolute;
+
+  transition-property:all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+
   border-radius: 0.5rem;
-  /*  */
-  pointer-events: none;
+  background-image: url("../rainbow-24-1x.png");
+  background-size: 100% 100%;
+  opacity: 0;
+}
+.bg:hover {
+  background-color: white;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+
+  opacity: 1;
+}
+
+button {
+  width: var(--button-width);
+  height: var(--button-height);
+  position:absolute;
+
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  padding: 1rem;
+  background: transparent;
 }
 
 .button-size {
   width: 200px;
   height: 110px;
-  position: absolute;
 }
 
-.button-curtain {
+/* .button-curtain {
   opacity: 1;
   background: var(--c2-light);
   transition-property: opacity;
@@ -115,10 +143,10 @@ button {
 }
 .button-curtain:hover {
   opacity: 0;
-}
+} */
 
 .rainbow {
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem;
   background: linear-gradient(
     90deg,
     rgba(255, 0, 0, 1) 0%,
@@ -135,7 +163,7 @@ button {
     rgba(0, 1, 103, 1) 85.71%,
     rgba(134, 0, 255, 1) 85.71%,
     rgba(134, 0, 255, 1) 100%
-  );
+  ); */
 }
 
 /* Using CSS variables to modify jump term or easing function */
