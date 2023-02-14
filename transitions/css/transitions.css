@@ -5,7 +5,8 @@
   --step-count: 5;
 
   --button-width: 200px;
-  --button-height: 125px;
+  --button-height: 70px;
+  --button-radius: 1rem;
 }
 
 @keyframes move-right {
@@ -64,7 +65,7 @@
   transition-delay: 1s;
 }
 .individual:hover {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--c1-light);
 }
 
@@ -89,64 +90,28 @@
   rotate: 180deg;
 }
 
-.bg {
-  width: var(--button-width);
-  height: var(--button-height);
-  position: absolute;
 
-  transition-property:all;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
 
-  border-radius: 0.5rem;
-  background-image: url("../rainbow-24-1x.png");
-  background-size: 100% 100%;
-  opacity: 0;
-}
-.bg:hover {
-  background-color: white;
-  transition-property: opacity;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
 
+/*
+This is the backbone of this effect. There is an opacity "curtain" that sits
+behind the button.
+*/
+.bg-curtain {
+  transition: 1s background-color ease;
+  background-color: #eee;
   opacity: 1;
+  border-radius: var(--button-radius);
+}
+.bg-curtain:hover {
+  background-color: rgba(255, 255, 255, 0);
 }
 
-button {
-  width: var(--button-width);
-  height: var(--button-height);
-  position:absolute;
-
-  border-radius: 0.5rem;
-  font-size: 2rem;
-  padding: 1rem;
-  background: transparent;
-}
-
-.button-size {
-  width: 200px;
-  height: 110px;
-}
-
-/* .button-curtain {
-  opacity: 1;
-  background: var(--c2-light);
-  transition-property: opacity;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
-  width: 250px;
-  height: 110px;
-  position: absolute;
-}
-.button-curtain:hover {
-  opacity: 0;
-} */
-
-.rainbow {
-  /* border-radius: 0.5rem;
+/* 
+The parent container is the container that has whatever content is
+desired to be shown behind the opacity curtain.
+*/
+.bg-rainbow {
   background: linear-gradient(
     90deg,
     rgba(255, 0, 0, 1) 0%,
@@ -163,8 +128,29 @@ button {
     rgba(0, 1, 103, 1) 85.71%,
     rgba(134, 0, 255, 1) 85.71%,
     rgba(134, 0, 255, 1) 100%
-  ); */
+  );
+  border-radius: var(--button-radius);
 }
+
+/* 
+Finally: The button can be styled however you like, as long as "background-color"
+is set to be transparent, so the rainbow and curtain can be seen behind.
+*/
+button {
+  border-radius: var(--button-radius);
+  font-size: 1rem;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: transparent;
+  transition: 250ms font-size;
+}
+button:hover {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: #000 0 0 5px;
+}
+
 
 /* Using CSS variables to modify jump term or easing function */
 #steps-jump-start {

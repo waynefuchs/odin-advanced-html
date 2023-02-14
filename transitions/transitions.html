@@ -13,15 +13,18 @@
 
     <h2>Individual</h2>
     <div class="example-container">
-      <p class="individual box center marktop">Hover over me to see effect</p>
+      <p class="individual box center marktop">Hover over me to see effect (1 second and 3 second delay)</p>
       <div class="box center marktop">
-        <div class="bg">
-          <button id="rainbowbutton" class="center button-size">Rainbow Hover</button>
+        <p>This one is an effect suggested by The Odin Project as a sort of extra-credit project.</p>
+        <div class="bg-rainbow">
+          <div class="bg-curtain">
+            <button id="rainbowbutton">Click Me</button>
+          </div>
         </div>
         <script>
           const rb = document.getElementById("rainbowbutton");
           rb.addEventListener("click", (e) => {
-            alert("You clicked the button.")
+            alert("You clicked the rainbow button!")
           })
         </script>
       </div>
