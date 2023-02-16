@@ -94,13 +94,19 @@
 
 
 /*
+NOTE: Opacity can not be used here for two reasons:
+1. The button is a child of the curtain, so the button would disappear.
+2. If you separate the button from the curtain, it no longer bubbles up events, 
+   so button presses are no longer possible and javascript would need to be involved.
+*/
+
+/*
 This is the backbone of this effect. There is an opacity "curtain" that sits
 behind the button.
 */
 .bg-curtain {
   transition: 1s background-color ease;
-  background-color: #eee;
-  opacity: 1;
+  background-color: var(--c2-light);
   border-radius: var(--button-radius);
 }
 .bg-curtain:hover {
