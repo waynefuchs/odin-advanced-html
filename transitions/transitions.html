@@ -26,13 +26,13 @@
         </p>
         <div class="bg-rainbow">
           <div class="bg-curtain">
-            <button id="rainbowbutton">Click Me</button>
+            <button id="rainbow1">Click Me</button>
           </div>
         </div>
         <script>
-          const rb = document.getElementById("rainbowbutton");
-          rb.addEventListener("click", (e) => {
-            alert("You clicked the rainbow button!");
+          const rb1 = document.getElementById("rainbow1");
+          rb1.addEventListener("click", (e) => {
+            alert("You clicked the rainbow1 button!");
           });
         </script>
         <p><strong>A sort of naive solution</strong></p>
@@ -40,8 +40,14 @@
 
       <div class="box center marktop">
         <div>
-          <button class="rainbow">My Rainbow Button</button>
+          <button id="rainbow2" class="rainbow2">My Rainbow Button</button>
         </div>
+        <script>
+          const rb2 = document.getElementById("rainbow2");
+          rb2.addEventListener("click", (e) => {
+            alert("You clicked the rainbow2 button!");
+          });
+        </script>
       </div>
 
       <div class="multiple box center marktop">Multiple Effects</div>

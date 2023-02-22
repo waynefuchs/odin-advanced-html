@@ -1,14 +1,15 @@
 
-button.rainbow {
+button.rainbow2 {
   position: relative;
   border: var(--button-border-width) solid black;
   width: var(--button-width);
   height: var(--button-height);
   border-radius: var(--button-radius);
-  background-color: transparent;
+  background-color: green;
+  z-index: 1;
 }
 
-button.rainbow::before {
+button.rainbow2::before {
   background: linear-gradient(
     90deg,
     rgba(255, 0, 0, 1) 0%,
@@ -35,10 +36,11 @@ button.rainbow::before {
   width: calc(100% + 2 * var(--button-border-width));
   height: calc(100% + 2 * var(--button-border-width));
   border-radius: var(--button-radius);
-  opacity: 0;
+  opacity: 1;
   z-index: -1;
 }
 
-button.rainbow:hover::before {
+button.rainbow2:hover::before {
   opacity: 1;
+  z-index: -1;
 }
