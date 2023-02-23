@@ -17,8 +17,8 @@
     <div class="example-container">
       <div class="box center marktop">
         <p class="individual">
-          Hover over me to see effect (one-second start delay, and three-second
-          transition)
+          Hover over me to see an expensive effect, which will likely lag on
+          mobile (one-second start delay, and three-second transition)
         </p>
       </div>
 
@@ -31,7 +31,7 @@
         </p>
         <div class="bg-rainbow">
           <div class="bg-curtain">
-            <button id="rainbow1">Click Me</button>
+            <button id="rainbow1">Rainbow v1</button>
           </div>
         </div>
         <script>
@@ -46,10 +46,10 @@
       <div class="box center marktop">
         <h3>Rainbow v2</h3>
         <p>
-          I developed a "cleaner" way to handle the effect, without having to
-          use nested containers.
+          The same effect without requiring the use of nested html container
+          elements.
         </p>
-        <button id="rainbow" class="rainbow">My Rainbow Button</button>
+        <button id="rainbow" class="rainbow">Rainbow v2</button>
         <script>
           const rb2 = document.getElementById("rainbow");
           rb2.addEventListener("click", (e) => {
