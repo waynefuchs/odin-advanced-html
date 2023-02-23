@@ -51,16 +51,6 @@ behind the button.
   is set to be transparent, so the rainbow and curtain can be seen behind.
   */
 button#rainbow1 {
-  border-radius: var(--button-radius);
-  font-size: 1rem;
-  width: var(--button-width);
-  height: var(--button-height);
   background-color: transparent;
-  transition: 250ms font-size;
-}
-button#rainbow1:hover {
-  font-weight: bold;
-  font-size: 2rem;
-  color: #fff;
-  text-shadow: #000 0 0 5px;
+  margin: 0;
 }

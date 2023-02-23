@@ -8,6 +8,30 @@
   --button-height: 70px;
   --button-radius: 1rem;
   --button-border-width: 3px;
+
+  /* Added for rainbow button effect v2 */
+  --button-radius-outer: 12px;
+  --button-border-width: 3px;
+  --button-radius-inner: calc(
+    var(--button-radius-outer) - var(--button-border-width)
+  );
+}
+
+button {
+  margin: 1rem;
+  font-size: 1rem;
+  width: var(--button-width);
+  height: var(--button-height);
+  transition: 250ms font-size;
+  border-radius: var(--button-radius-outer);
+  border: var(--button-border-width) solid black;
+}
+
+button:hover {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+  text-shadow: #000 0 0 2px, #000 0 0 5px, #000 0 0 10px;
 }
 
 @keyframes move-right {
@@ -66,7 +90,7 @@
   transition-delay: 1s;
 }
 .individual:hover {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   color: var(--c1-light);
 }
 
@@ -79,6 +103,7 @@
   top: 0;
   left: 0;
   transition: transform 1s;
+  z-index: 100;
 }
 
 .multiple {

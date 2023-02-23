@@ -1,15 +1,36 @@
-
-button.rainbow2 {
+/* button specific settings where the class is set to "rainbow" */
+button.rainbow {
   position: relative;
-  border: var(--button-border-width) solid black;
   width: var(--button-width);
   height: var(--button-height);
-  border-radius: var(--button-radius);
-  background-color: green;
+  border-radius: var(--button-radius-outer);
+  background-color: white;
+
+  /* the button needs to be visible
+     eg: need to be on top and see the black border and text */
   z-index: 1;
+  opacity: 1;
 }
 
-button.rainbow2::before {
+button.rainbow::before {
+  /* handle opacity and transition
+     the rainbow background starts invisible */
+  transition: opacity 1s;
+  opacity: 0;
+
+  /* and ensure the rainbow background sits behind the button text and border */
+  z-index: -1;
+
+  /* fit the inner dimensions */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--button-radius-inner);
+
+  /* Rainbow */
   background: linear-gradient(
     90deg,
     rgba(255, 0, 0, 1) 0%,
@@ -27,20 +48,9 @@ button.rainbow2::before {
     rgba(134, 0, 255, 1) 85.71%,
     rgba(134, 0, 255, 1) 100%
   );
-
-  transition: all 1s;
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  width: calc(100% + 2 * var(--button-border-width));
-  height: calc(100% + 2 * var(--button-border-width));
-  border-radius: var(--button-radius);
-  opacity: 1;
-  z-index: -1;
 }
 
-button.rainbow2:hover::before {
+/* transition the opacity of the rainbow to "fully opaque" when you mouse over */
+button.rainbow:hover::before {
   opacity: 1;
-  z-index: -1;
 }

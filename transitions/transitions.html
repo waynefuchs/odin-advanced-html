@@ -15,11 +15,16 @@
 
     <h2>Individual</h2>
     <div class="example-container">
-      <div class="individual box center marktop">
-        Hover over me to see effect (1 second and 3 second delay)
+      <div class="box center marktop">
+        <p class="individual">
+          Hover over me to see effect (one-second start delay, and three-second
+          transition)
+        </p>
       </div>
 
+      <!-- Rainbow Effect Version 1 -->
       <div class="box center marktop">
+        <h3>Rainbow v1</h3>
         <p>
           This one is an effect suggested by The Odin Project as a sort of
           extra-credit project.
@@ -32,36 +37,41 @@
         <script>
           const rb1 = document.getElementById("rainbow1");
           rb1.addEventListener("click", (e) => {
-            alert("You clicked the rainbow1 button!");
+            alert("You clicked the 'Rainbow v1' button!");
           });
         </script>
-        <p><strong>A sort of naive solution</strong></p>
       </div>
 
+      <!-- Rainbow Effect Version 2 -->
       <div class="box center marktop">
-        <div>
-          <button id="rainbow2" class="rainbow2">My Rainbow Button</button>
-        </div>
+        <h3>Rainbow v2</h3>
+        <p>
+          I developed a "cleaner" way to handle the effect, without having to
+          use nested containers.
+        </p>
+        <button id="rainbow" class="rainbow">My Rainbow Button</button>
         <script>
-          const rb2 = document.getElementById("rainbow2");
+          const rb2 = document.getElementById("rainbow");
           rb2.addEventListener("click", (e) => {
-            alert("You clicked the rainbow2 button!");
+            alert("You clicked the 'Rainbow v2' button!");
           });
         </script>
       </div>
 
+      <!-- Multiple transition effect card -->
       <div class="multiple box center marktop">Multiple Effects</div>
     </div>
 
+    <!-- The ball demo... -->
     <h2>Ball Demo</h2>
     <div class="example-container">
       <p>Click anywhere to move the ball</p>
-      <div class="ball"></div>
+      <div id="ball" class="ball"></div>
       <p>Status:</p>
       <p id="ballstatus">Stationary</p>
     </div>
     <script>
-      const ballDiv = document.getElementById("foo");
+      const ballDiv = document.getElementById("ball");
       const ballStatus = document.getElementById("ballstatus");
       ballDiv.addEventListener("transitionend", (e) => {
         console.log("Transition complete");
