@@ -1,0 +1,47 @@
+/* This is to prevent a scroll bar while the paragraph elements slide in */
+div.fullwidth {
+  width: 100vw;
+  overflow: hidden;
+}
+
+p.example1 {
+  animation-duration: 3s;
+  animation-name: SlideIn;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  max-width: 100vw;
+}
+
+p.example2 {
+  animation-duration: 3s;
+  animation-name: SlideInSmooth;
+}
+
+/*  I like pascal-case for keyframe names to avoid confusion 
+    I also know that this convention is non-standard :| */
+
+/* This is laggy! It should use translate instead! */
+@keyframes SlideIn {
+  from {
+    margin-left: 100%;
+    max-width: 300%;
+  }
+  75% {
+    margin-left: 25%;
+    max-width: 50%;
+    font-size: 300%;
+  }
+  to {
+    max-width: 100vw;
+  }
+}
+
+@keyframes SlideInSmooth {
+  from {
+    transform: translate(200%, 0);
+  }
+  to {
+    transform: translate(0,0);
+  }
+}
