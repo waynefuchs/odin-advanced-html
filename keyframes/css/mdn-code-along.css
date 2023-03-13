@@ -1,3 +1,10 @@
+/* Create kind of a console */
+#output {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /* This is to prevent a scroll bar while the paragraph elements slide in */
 div.fullwidth {
   width: 100vw;
@@ -7,10 +14,12 @@ div.fullwidth {
 p.example1 {
   animation-duration: 3s;
   animation-name: SlideIn;
-  animation-iteration-count: infinite;
+  /* infinite will prevent the javascript event "animationend" from ever firing */
+  animation-iteration-count: 3; 
   animation-direction: alternate;
 
   max-width: 100vw;
+  height: 50vh;
 }
 
 p.example2 {
@@ -25,6 +34,7 @@ p.example2 {
 @keyframes SlideIn {
   from {
     margin-left: 100%;
+    width: 300%;
     max-width: 300%;
   }
   75% {
